@@ -1,30 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import Header from "./components/layout/header";
+import {Box} from "@mui/material";
+import { Routes, Route } from "react-router-dom";
+import BooksPage from "./pages/books-page";
 
+import "./App.css";
+import ReadingListPage from "./pages/reading-list-page";
+import NotFoundPage from "./pages/not-found-page";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box sx={{ paddingX: "10px" }} className="app-container">
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<BooksPage />} />
+        <Route path="/reading-list" element={<ReadingListPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Box>
   );
 }
 

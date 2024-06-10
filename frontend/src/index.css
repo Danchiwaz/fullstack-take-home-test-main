@@ -17,6 +17,9 @@ body {
 .font-mulish{
   font-family: "Mulish", sans-serif !important;
 }
+.errorOrEmptyState{
+  color:var(--dark-color);
+}
 
 :root{
   --primary-color: #5ACCCC;

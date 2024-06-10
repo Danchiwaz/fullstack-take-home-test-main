@@ -86,8 +86,7 @@ const BookCard = ({ book, allowRemove=false }: BookCardProps) => {
             flex: "1",
           }}
         >
-          <Typography className="font-mulish">{book.title}</Typography>
-
+          <Typography variant={'h6'} sx={{color:"var(--dark-color)"}} className="font-mulish">{book.title}</Typography>
           <Box
             sx={{
               display: "flex",
@@ -114,7 +113,7 @@ const BookCard = ({ book, allowRemove=false }: BookCardProps) => {
                 {book?.author}
               </Typography>
             </Box>
-            <Tooltip title={"Add to reading list"}>
+            <Tooltip title={!allowRemove ? "Add to reading list" : "Remove from reading list"}>
               <IconButton onClick={handleAddOrRemove}>
                 {
                     allowRemove? isInReadingList ? <DeleteIcon /> : <AddIcon /> : <AddIcon />

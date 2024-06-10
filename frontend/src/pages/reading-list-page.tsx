@@ -10,12 +10,9 @@ const ReadingListPage = () => {
 
   return (
     <Box sx={{ marginY: "80px", maxWidth: "1024px", marginX: "auto" }}>
-
             <Typography className="font-mulish" sx={{ fontWeight: "800", fontSize: "24px" }}>
                 Reading List
             </Typography>
-
-
       {/* Books Grid */}
       <Grid container spacing={2} sx={{ marginY: "20px" }}>
         {readingList?.length === 0 ? (

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchBooksQuery } from "../services/books.services";
-import Header from "../components/layout/header";
 import { Box, Button, FormControl, Grid, MenuItem, Select, SelectChangeEvent, Typography } from "@mui/material";
 import { BookSearchInput } from "../components/book-search-input";
 import BookCard from "../components/book-card";
